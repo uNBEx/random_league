@@ -1,0 +1,24 @@
+{
+  "name": "random_league",
+  "version": "0.0.1",
+  "description": "Discord bot for randomizing all the things League of Legends",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uNBEx/random_league.git"
+  },
+  "author": "uNBEx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uNBEx/random_league/issues"
+  },
+  "homepage": "https://github.com/uNBEx/random_league#readme",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.1"
+  }
+}
