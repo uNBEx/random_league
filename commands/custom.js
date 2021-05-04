@@ -1,5 +1,7 @@
 const Discord = require("discord.js");
 
+const constRoles=['TOP','JUNGLE','MID','BOT','SUPPORT'];
+
 module.exports = {
     name: 'custom',
     description: 'Randomize teams and roles for a 5v5 custom game!',
