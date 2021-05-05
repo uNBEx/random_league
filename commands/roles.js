@@ -29,7 +29,7 @@ module.exports = {
         const rolesEmbed = new Discord.MessageEmbed()
 	        .setColor('#9c8255')
 	        .setTitle('Random roles:')
-	        .setAuthor('random(league);', 'https://i.imgur.com/YUGADtq.png')
+	        .setAuthor('random(league);', 'https://i.imgur.com/1VqLHPg.png')
 	        //.setDescription('Players and roles:')
 	        //.setThumbnail('https://i.imgur.com/OJbDkos.png')
 	        .setImage('https://media.giphy.com/media/aKh27TGVXZW1TaYvMD/giphy.gif')

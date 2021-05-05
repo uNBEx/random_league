@@ -22,7 +22,7 @@ module.exports = {
         const blueSideEmbed = new Discord.MessageEmbed()
 	        .setColor('#0099ff')
 	        .setTitle('Blue side')
-	        .setAuthor('5v5 custom teams', 'https://i.imgur.com/YUGADtq.png')
+	        .setAuthor('random(league);', 'https://i.imgur.com/1VqLHPg.png')
 	        .setDescription('Roles and players:')
 	        .setThumbnail('https://i.imgur.com/OJbDkos.png')
 	        .addFields(
@@ -34,11 +34,11 @@ module.exports = {
 	        )
 	        .setImage('https://media.giphy.com/media/aKh27TGVXZW1TaYvMD/giphy.gif')
 	        .setTimestamp()
-            .setFooter('GLHF!');
+            .setFooter(`Invoked by ${message.author.tag}.  GLHF!`, `${message.author.avatarURL()}`)
         const redSideEmbed = new Discord.MessageEmbed()
 	        .setColor('#ff0000')
 	        .setTitle('Red side')
-	        .setAuthor('5v5 custom teams', 'https://i.imgur.com/YUGADtq.png')
+	        .setAuthor('random(league);', 'https://i.imgur.com/1VqLHPg.png')
 	        .setDescription('Roles and players:')
 	        .setThumbnail('https://i.imgur.com/PgqhiFz.png')
 	        .addFields(
@@ -50,7 +50,7 @@ module.exports = {
 	        )
 	        .setImage('https://media.giphy.com/media/aKh27TGVXZW1TaYvMD/giphy.gif')
 	        .setTimestamp()
-            .setFooter('GLHF!');
+            .setFooter(`Invoked by ${message.author.tag}.  GLHF!`, `${message.author.avatarURL()}`)
         message.channel.send(blueSideEmbed);
         message.channel.send(redSideEmbed);
     }
