@@ -13,7 +13,20 @@ module.exports = {
         if(role==='top'){
             var champion = pickRandomTop()
         }
-        else return;
+        else if(role==='jungle'){
+            var champion = pickRandomJungle()
+            summs[0]='Smite'
+        }
+        else if(role==='mid'){
+            var champion = pickRandomMid()
+        }
+        else if(role==='bot'){
+            var champion = pickRandomMid()
+        }
+        else if(role==='support'){
+            var champion = pickRandomMid()
+        }
+        
 
 
         let runesArray = pickRandomRunes()
@@ -21,15 +34,15 @@ module.exports = {
 
         const embed = new Discord.MessageEmbed()
 	        .setColor('#0099ff')
-	        .setTitle('Hello there')
+	        .setTitle(`Hi ${message.author.tag}!`)
 	        .setAuthor('random(league);', 'https://i.imgur.com/1VqLHPg.png')
 	        .setDescription('Your results:')
 	        .setThumbnail('https://i.imgur.com/OJbDkos.png')
 	        .addFields(
-                { name: 'ROLE', value: `${role}`},
-                { name: 'CHAMPION', value: `${champion}`},
-                { name: 'SUMMS', value: `${summs[0]} and ${summs[1]}`},
-                { name: 'RUNES:', value: `${runesArray[0]}\n${runesArray[1]}\n${runesArray[2]}\n${runesArray[3]}\n${runesArray[4]}\n${runesArray[5]}\n${runesArray[6]}\n${runesArray[7]}\n${runesArray[8]}\n${runesArray[9]}\n${runesArray[10]}\n`},
+                { name: 'ROLE:', value: `${role}`},
+                { name: 'CHAMPION:', value: `${champion}`},
+                { name: 'SUMMS:', value: `${summs[0]} and ${summs[1]}`},
+                { name: 'RUNES:', value: `${runesArray[0]}\n\n${runesArray[1]}\n\n${runesArray[2]}\n${runesArray[3]}\n${runesArray[4]}\n\n${runesArray[5]}\n\n${runesArray[6]}\n${runesArray[7]}\n\n${runesArray[8]}\n${runesArray[9]}\n${runesArray[10]}\n`},
 	        )
 	        //.setImage('https://media.giphy.com/media/aKh27TGVXZW1TaYvMD/giphy.gif')
 	        .setTimestamp()
@@ -211,194 +224,164 @@ function pickRandomTop(){
     return pool[r]
 }
 
-function pickRandomTop(){
+function pickRandomJungle(){
     let pool
-    pool = ['Aatrox',
-            'Akali',
-            'Camille',
-            'ChoGath',
-            'Darius',
-            'Fiora',
-            'Gangplank',
-            'Garen',
-            'Gnar',
+    pool = ['Amumu',
+            'Diana',
+            'Dr. Mundo',
+            'Ekko',
+            'Elise',
+            'Evelynn',
+            'Fiddlesticks',
+            'Gragas',
+            'Graves',
             'Gwen',
-            'Heimerdinger',
-            'Illaoi',
-            'Irelia',
-            'Jax',
-            'Jayce',
-            'Kayle',
-            'Kennen',
-            'Kled',
-            'Malphite',
-            'Mordekaiser',
-            'Nasus',
-            'Ornn',
+            'Hecarim',
+            'Ivern',
+            'Jarvan IV',
+            'Karthus',
+            'Kayn',
+            'KhaZix',
+            'Kindred',
+            'Lee Sin',
+            'Lillia',
+            'Master Yi',
+            'Morgana',
+            'Nidalee',
+            'Nocturne',
+            'Nunu & Willump',
+            'Olaf',
             'Poppy',
-            'Quinn',
-            'Renekton',
-            'Riven',
-            'Rumble',
-            'Sett',
-            'Shen',
-            'Singed',
-            'Sion',
-            'Sylas',
-            'Tahm Kench',
-            'Teemo',
-            'Tryndamere',
-            'Urgot',
-            'Vayne',
+            'Rammus',
+            'RekSai',
+            'Rengar',
+            'Sejuani',
+            'Shaco',
+            'Shyvana',
+            'Skarner',
+            'Taliyah',
+            'Trundle',
+            'Udyr',
+            'Vi',
+            'Viego',
             'Volibear',
-            'Wukong',
-            'Yasuo',
-            'Yone',
-            'Yorick']
+            'Warwick',
+            'Xin Zhao',
+            'Zac']
     let r=Math.floor(Math.random()*pool.length)
     return pool[r]
 }
 
-function pickRandomTop(){
+function pickRandomMid(){
     let pool
-    pool = ['Aatrox',
+    pool = ['Ahri',
             'Akali',
-            'Camille',
-            'ChoGath',
-            'Darius',
-            'Fiora',
-            'Gangplank',
-            'Garen',
-            'Gnar',
+            'Anivia',
+            'Annie',
+            'Aurelion Sol',
+            'Azir',
+            'Cassiopeia',
+            'Corki',
+            'Diana',
+            'Ekko',
+            'Fizz',
+            'Galio',
             'Gwen',
             'Heimerdinger',
-            'Illaoi',
             'Irelia',
-            'Jax',
-            'Jayce',
-            'Kayle',
-            'Kennen',
-            'Kled',
-            'Malphite',
-            'Mordekaiser',
-            'Nasus',
-            'Ornn',
-            'Poppy',
-            'Quinn',
-            'Renekton',
-            'Riven',
-            'Rumble',
-            'Sett',
-            'Shen',
-            'Singed',
-            'Sion',
+            'Kassadin',
+            'Katarina',
+            'LeBlanc',
+            'Lissandra',
+            'Lucian',
+            'Lux',
+            'Malzahar',
+            'Neeko',
+            'Orianna',
+            'Pantheon',
+            'Qiyana',
+            'Ryze',
             'Sylas',
-            'Tahm Kench',
-            'Teemo',
-            'Tryndamere',
-            'Urgot',
-            'Vayne',
-            'Volibear',
-            'Wukong',
+            'Syndra',
+            'Talon',
+            'Twisted Fate',
+            'Veigar',
+            'VelKoz',
+            'Viego',
+            'Viktor',
+            'Vladimir',
+            'Xerath',
             'Yasuo',
             'Yone',
-            'Yorick']
+            'Zed',
+            'Ziggs',
+            'Zoe']
     let r=Math.floor(Math.random()*pool.length)
     return pool[r]
 }
 
-function pickRandomTop(){
+function pickRandomBot(){
     let pool
-    pool = ['Aatrox',
-            'Akali',
-            'Camille',
-            'ChoGath',
-            'Darius',
-            'Fiora',
-            'Gangplank',
-            'Garen',
-            'Gnar',
-            'Gwen',
-            'Heimerdinger',
-            'Illaoi',
-            'Irelia',
-            'Jax',
-            'Jayce',
-            'Kayle',
-            'Kennen',
-            'Kled',
-            'Malphite',
-            'Mordekaiser',
-            'Nasus',
-            'Ornn',
-            'Poppy',
-            'Quinn',
-            'Renekton',
-            'Riven',
-            'Rumble',
-            'Sett',
-            'Shen',
-            'Singed',
-            'Sion',
-            'Sylas',
-            'Tahm Kench',
-            'Teemo',
-            'Tryndamere',
-            'Urgot',
+    pool = ['Aphelios',
+            'Ashe',
+            'Caitlyn',
+            'Draven',
+            'Ezreal',
+            'Jhin',
+            'Jinx',
+            'KaiSa',
+            'Kalista',
+            'KogMaw',
+            'Lucian',
+            'Miss Fortune',
+            'Samira',
+            'Senna',
+            'Sivir',
+            'Tristana',
+            'Twitch',
+            'Varus',
             'Vayne',
-            'Volibear',
-            'Wukong',
-            'Yasuo',
-            'Yone',
-            'Yorick']
+            'Xayah',
+            'Yasuo']
     let r=Math.floor(Math.random()*pool.length)
     return pool[r]
 }
 
-function pickRandomTop(){
+function pickRandomSupport(){
     let pool
-    pool = ['Aatrox',
-            'Akali',
-            'Camille',
-            'ChoGath',
-            'Darius',
-            'Fiora',
-            'Gangplank',
-            'Garen',
-            'Gnar',
-            'Gwen',
-            'Heimerdinger',
-            'Illaoi',
-            'Irelia',
-            'Jax',
-            'Jayce',
-            'Kayle',
-            'Kennen',
-            'Kled',
-            'Malphite',
-            'Mordekaiser',
-            'Nasus',
-            'Ornn',
-            'Poppy',
-            'Quinn',
-            'Renekton',
-            'Riven',
-            'Rumble',
+    pool = ['Alistar',
+            'Bard',
+            'Blitzcrank',
+            'Brand',
+            'Braum',
+            'Galio',
+            'Janna',
+            'Karma',
+            'Leona',
+            'Lulu',
+            'Lux',
+            'Maokai',
+            'Morgana',
+            'Nami',
+            'Nautilus',
+            'Pantheon',
+            'Pyke',
+            'Rakan',
+            'Rell',
+            'Senna',
+            'Seraphine',
             'Sett',
-            'Shen',
-            'Singed',
-            'Sion',
-            'Sylas',
-            'Tahm Kench',
-            'Teemo',
-            'Tryndamere',
-            'Urgot',
-            'Vayne',
-            'Volibear',
-            'Wukong',
-            'Yasuo',
-            'Yone',
-            'Yorick']
+            'Shaco',
+            'Sona',
+            'Soraka',
+            'Swain',
+            'Taric',
+            'Thresh',
+            'VelKoz',
+            'Xerath',
+            'Yuumi',
+            'Zilean',
+            'Zyra']
     let r=Math.floor(Math.random()*pool.length)
     return pool[r]
 }
