@@ -28,7 +28,7 @@ module.exports = {
         }
         else return;
         
-
+        let items = pickRandomItems()
 
         let runesArray = pickRandomRunes()
 
@@ -40,16 +40,125 @@ module.exports = {
 	        .setDescription('Your results:')
 	        .setThumbnail('https://i.imgur.com/OJbDkos.png')
 	        .addFields(
-                { name: 'ROLE:', value: `${role}`},
-                { name: 'CHAMPION:', value: `${champion}`},
-                { name: 'SUMMS:', value: `${summs[0]} and ${summs[1]}`},
-                { name: 'RUNES:', value: `${runesArray[0]}\n\n${runesArray[1]}\n\n${runesArray[2]}\n${runesArray[3]}\n${runesArray[4]}\n\n${runesArray[5]}\n\n${runesArray[6]}\n${runesArray[7]}\n\n${runesArray[8]}\n${runesArray[9]}\n${runesArray[10]}\n`},
+                { name: 'ROLE:', value: `${role}`, inline: true},
+                { name: 'CHAMPION:', value: `${champion}`, inline: true},
+                { name: 'SUMMS:', value: `${summs[0]} and ${summs[1]}`,inline: true},
+                { name: 'RUNES:', value: `${runesArray[0]}\n\n${runesArray[1]}\n\n${runesArray[2]}\n${runesArray[3]}\n${runesArray[4]}\n\n${runesArray[5]}\n\n${runesArray[6]}\n${runesArray[7]}\n\n${runesArray[8]}\n${runesArray[9]}\n${runesArray[10]}`},
+                { name: 'ITEMS:', value: `${items[0]}\n${items[1]}\n${items[2]}\n${items[3]}\n${items[4]}\n${items[5]}`}
 	        )
 	        //.setImage('https://media.giphy.com/media/aKh27TGVXZW1TaYvMD/giphy.gif')
 	        .setTimestamp()
             .setFooter(`Invoked by ${message.author.tag}.  GLHF!`, `${message.author.avatarURL()}`)
         message.channel.send(embed);
     }
+}
+
+function pickRandomItems(){
+    let build = ['mythic', 'boots', 'legend1', 'legend2', 'legend3', 'legend4']
+    let mythics
+    mythics = [ 'Divine Sunderer',
+                'Duskblade of Draktharr',
+                'Eclipse',
+                'Everfrost',
+                'Frostfire Gauntlet',
+                'Galeforce',
+                'Goredrinker',
+                'Hextech Rocketbelt',
+                'Immortal Shieldbow',
+                'Imperial Mandate',
+                'Kraken Slayer',
+                'Liandry\'s Anguish',
+                'Locket of the Iron Solari',
+                'Luden\'s tempest',
+                'Moonstone Renewer',
+                'Night Harvester',
+                'Prowler\'s Claw',
+                'Riftmaker',
+                'Shurelya\'s Battlesong',
+                'Stridebreaker',
+                'Sunfire Aegis',
+                'Trinity Force',
+                'Turbo Chemtank']
+    build[0] = mythics[Math.floor(Math.random()*mythics.length)]
+    let boots
+    boots = [   'Berserker\'s Greaves',
+                'Boots of Swiftness',
+                'Ionian Boots od Lucidity',
+                'Mercury\'s Treads',
+                'Mobility Boots',
+                'Plated Steelcaps',
+                'Sorcerer\'s Shoes']
+    build[1] = boots[Math.floor(Math.random()*boots.length)]
+    let items
+    items = [   'Abyssal Mask',
+                'Archangel\'s Staff',
+                'Ardent Censer',
+                'Banshee\'s Veil',
+                'Black Cleaver',
+                'Blade of the Ruined King',
+                'Bloodthirster',
+                'Chempunk Chainsword',
+                'Cosmic Drive',
+                'Dead Man\'s Plate',
+                'Death\'s Dance',
+                'Demonic Embrace',
+                'Edge of Night',
+                'Essence Reaver',
+                'Force of Nature',
+                'Frozen Heart',
+                'Gargoyle Stoneplate',
+                'Guardian Angel',
+                'Guinsoo\'s Rageblade',
+                'Horizon Focus',
+                'Infinity Edge',
+                'Knight\'s Vow',
+                'Lich Bane',
+                'Lord Dominik\'s Regards',
+                'Manamune',
+                'Maw of Malmortius',
+                'Mejai\'s Soulstealer',
+                'Mercurial Scimitar',
+                'Mikael\'s Blessing',
+                'Morellonomicon',
+                'Mortal Reminder',
+                'Nashor\'s Tooth',
+                'Navori Quickblades',
+                'Phantom Dancer',
+                'Rabadon\'s Deathcap',
+                'Randuin\'s Omen',
+                'Rapid Firecannon',
+                'Ravenous Hydra',
+                'Redemption',
+                'Runaan\'s Hurricane',
+                'Rylai\'s Crystal Scepter',
+                'Sanguine Blade',
+                'Serpent\'s Fang',
+                'Serylda\'s Grudge',
+                'Silvermere Dawn',
+                'Spirit Visage',
+                'Staff of Flowing Water',
+                'Sterak\'s Gage',
+                'Stormrazor',
+                'The Collector',
+                'Thornmail',
+                'Titanic Hydra',
+                'Umbrial Glaive',
+                'Vigilant Wardstone',
+                'Void Staff',
+                'Warmog\'s Armor',
+                'Wit\'s End',
+                'Youmuu\'s Ghostblade',
+                'Zeke\'s Convergence',
+                'Zhonya\'s Hourglass']
+    for(let i = 2;i<6;i++){
+        let r = Math.floor(Math.random()*items.length)
+        build[i]=items[r]
+        items.splice(r,1)
+    }
+    return build
+
+
+
 }
 
 function pickRandomRunes(){
