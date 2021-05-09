@@ -20,12 +20,13 @@ module.exports = {
         else if(role==='mid'){
             var champion = pickRandomMid()
         }
-        else if(role==='bot'){
+        else if(role==='bot' || role==='adc'){
             var champion = pickRandomBot()
         }
         else if(role==='support'){
             var champion = pickRandomSupport()
         }
+        else return;
         
 
 
