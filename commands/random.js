@@ -147,8 +147,8 @@ function pickRandomRunes(){
     
     answer[6]=treeTwo[treeTwoLayerOneNumber][Math.floor(Math.random()*treeTwo[treeTwoLayerOneNumber].length)]
     answer[7]=treeTwo[treeTwoLayerTwoNumber][Math.floor(Math.random()*treeTwo[treeTwoLayerTwoNumber].length)]
-
-    let little = [  ['Adaptive', 'Attack speed', 'Haste'],
+    let little
+    little = [      ['Adaptive', 'Attack speed', 'Haste'],
                     ['Adaptive', 'Armor', 'Magic Resist'],
                     ['Health', 'Armor', 'Magic Resist']]
     answer[8] = little[0][Math.floor(Math.random()*3)]
