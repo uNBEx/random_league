@@ -21,10 +21,10 @@ module.exports = {
             var champion = pickRandomMid()
         }
         else if(role==='bot'){
-            var champion = pickRandomMid()
+            var champion = pickRandomBot()
         }
         else if(role==='support'){
-            var champion = pickRandomMid()
+            var champion = pickRandomSupport()
         }
         
 
@@ -152,8 +152,8 @@ function pickRandomRunes(){
                     ['Adaptive', 'Armor', 'Magic Resist'],
                     ['Health', 'Armor', 'Magic Resist']]
     answer[8] = little[0][Math.floor(Math.random()*3)]
-    answer[9] = little[0][Math.floor(Math.random()*3)]
-    answer[10] = little[0][Math.floor(Math.random()*3)]
+    answer[9] = little[1][Math.floor(Math.random()*3)]
+    answer[10] = little[2][Math.floor(Math.random()*3)]
     return answer
 }
 
