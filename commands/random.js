@@ -141,6 +141,7 @@ function pickRandomRunes(){
     answer[8] = little[0][Math.floor(Math.random()*3)]
     answer[9] = little[0][Math.floor(Math.random()*3)]
     answer[10] = little[0][Math.floor(Math.random()*3)]
+    return answer
 }
 
 function pickRandomSumms(){
