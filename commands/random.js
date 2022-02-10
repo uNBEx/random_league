@@ -81,7 +81,9 @@ function pickRandomItems(){
                 'Stridebreaker',
                 'Sunfire Aegis',
                 'Trinity Force',
-                'Turbo Chemtank']
+                'Turbo Chemtank',
+                'Crown of the Shattered Queen',
+                'Evenshroud']
     build[0] = mythics[Math.floor(Math.random()*mythics.length)]
     let boots
     boots = [   'Berserker\'s Greaves',
@@ -152,7 +154,12 @@ function pickRandomItems(){
                 'Wit\'s End',
                 'Youmuu\'s Ghostblade',
                 'Zeke\'s Convergence',
-                'Zhonya\'s Hourglass']
+                'Zhonya\'s Hourglass',
+                'Winter\'s Approach',
+                'Anathema\s Chains',
+                'Shadowflame',
+                'Axiom Arc',
+                'Hullbreaker']
     for(let i = 2;i<6;i++){
         let r = Math.floor(Math.random()*items.length)
         build[i]=items[r]
@@ -193,7 +200,7 @@ function pickRandomRunes(){
                         ['Conditioning','Second wind','Bone plating'],
                         ['Overgrowth','Revitalize','Unflinching']]
 
-    inspirationArray = [['Glacial augment', 'Unsealed spellbook', 'Prototype: Omnistone'],
+    inspirationArray = [['Glacial augment', 'Unsealed spellbook', 'First Strike'],
                         ['Hextech flashtraption','Magical footwear','Perfect timing'],
                         ['Future\'s market','Minion dematerializer','Biscuit delivery'],
                         ['Cosmic insight','Approach velocity','Time warp tonic']]
@@ -291,7 +298,7 @@ function pickRandomSumms(){
 
 function pickRandomChampion(){
     let pool
-    pool = ['Aatrox', 'Ahri', 'Akali', 'Alistar', 'Amumu', 'Anivia', 'Annie', 'Aphelios', 'Ashe', 'Aurelion Sol', 'Azir', 'Bard', 'Blitzcrank', 'Brand', 'Braum', 'Caitlyn', 'Camille', 'Cassiopeia', 'ChoGath', 'Corki', 'Darius', 'Diana', 'Dr. Mundo', 'Draven', 'Ekko', 'Elise', 'Evelynn', 'Ezreal', 'Fiddlesticks', 'Fiora', 'Fizz', 'Galio', 'Gangplank', 'Garen', 'Gnar', 'Gragas', 'Graves', 'Gwen', 'Hecarim', 'Heimerdinger', 'Illaoi', 'Irelia', 'Ivern', 'Janna', 'Jarvan IV', 'Jax', 'Jayce', 'Jhin', 'Jinx', 'KaiSa', 'Kalista', 'Karma', 'Karthus', 'Kassadin', 'Katarina', 'Kayle', 'Kayn', 'Kennen', 'KhaZix', 'Kindred', 'Kled', 'KogMaw', 'LeBlanc', 'Lee Sin', 'Leona', 'Lillia', 'Lissandra', 'Lucian', 'Lulu', 'Lux', 'Malphite', 'Malzahar', 'Maokai', 'Master Yi', 'Miss Fortune', 'Mordekaiser', 'Morgana', 'Nami', 'Nasus', 'Nautilus', 'Neeko', 'Nidalee', 'Nocturne', 'Nunu & Willump', 'Olaf', 'Orianna', 'Ornn', 'Pantheon', 'Poppy', 'Pyke', 'Qiyana', 'Quinn', 'Rakan', 'Rammus', 'RekSai', 'Rell', 'Renekton', 'Rengar', 'Riven', 'Rumble', 'Ryze', 'Samira', 'Sejuani', 'Senna', 'Seraphine', 'Sett', 'Shaco', 'Shen', 'Shyvana', 'Singed', 'Sion', 'Sivir', 'Skarner', 'Sona', 'Soraka', 'Swain', 'Sylas', 'Syndra', 'Tahm Kench', 'Taliyah', 'Talon', 'Taric', 'Teemo', 'Thresh', 'Tristana', 'Trundle', 'Tryndamere', 'Twisted Fate', 'Twitch', 'Udyr', 'Urgot', 'Varus', 'Vayne', 'Veigar', 'VelKoz', 'Vi', 'Viego', 'Viktor', 'Vladimir', 'Volibear', 'Warwick', 'Wukong', 'Xayah', 'Xerath', 'Xin Zhao', 'Yasuo', 'Yone', 'Yorick', 'Yuumi', 'Zac', 'Zed', 'Ziggs', 'Zilean', 'Zoe', 'Zyra']
+    pool = ['Aatrox', 'Ahri', 'Akali', 'Akshan', 'Alistar', 'Amumu', 'Anivia', 'Annie', 'Aphelios', 'Ashe', 'Aurelion Sol', 'Azir', 'Bard', 'Blitzcrank', 'Brand', 'Braum', 'Caitlyn', 'Camille', 'Cassiopeia', 'ChoGath', 'Corki', 'Darius', 'Diana', 'Dr. Mundo', 'Draven', 'Ekko', 'Elise', 'Evelynn', 'Ezreal', 'Fiddlesticks', 'Fiora', 'Fizz', 'Galio', 'Gangplank', 'Garen', 'Gnar', 'Gragas', 'Graves', 'Gwen', 'Hecarim', 'Heimerdinger', 'Illaoi', 'Irelia', 'Ivern', 'Janna', 'Jarvan IV', 'Jax', 'Jayce', 'Jhin', 'Jinx', 'KaiSa', 'Kalista', 'Karma', 'Karthus', 'Kassadin', 'Katarina', 'Kayle', 'Kayn', 'Kennen', 'KhaZix', 'Kindred', 'Kled', 'KogMaw', 'LeBlanc', 'Lee Sin', 'Leona', 'Lillia', 'Lissandra', 'Lucian', 'Lulu', 'Lux', 'Malphite', 'Malzahar', 'Maokai', 'Master Yi', 'Miss Fortune', 'Mordekaiser', 'Morgana', 'Nami', 'Nasus', 'Nautilus', 'Neeko', 'Nidalee', 'Nocturne', 'Nunu & Willump', 'Olaf', 'Orianna', 'Ornn', 'Pantheon', 'Poppy', 'Pyke', 'Qiyana', 'Quinn', 'Rakan', 'Rammus', 'RekSai', 'Rell', 'Renekton', 'Rengar', 'Riven', 'Rumble', 'Ryze', 'Samira', 'Sejuani', 'Senna', 'Seraphine', 'Sett', 'Shaco', 'Shen', 'Shyvana', 'Singed', 'Sion', 'Sivir', 'Skarner', 'Sona', 'Soraka', 'Swain', 'Sylas', 'Syndra', 'Tahm Kench', 'Taliyah', 'Talon', 'Taric', 'Teemo', 'Thresh', 'Tristana', 'Trundle', 'Tryndamere', 'Twisted Fate', 'Twitch', 'Udyr', 'Urgot', 'Varus', 'Vayne', 'Veigar', 'Vex', 'VelKoz', 'Vi', 'Viego', 'Viktor', 'Vladimir', 'Volibear', 'Warwick', 'Wukong', 'Xayah', 'Xerath', 'Xin Zhao', 'Yasuo', 'Yone', 'Yorick', 'Yuumi', 'Zac', 'Zed', 'Zeri', 'Ziggs', 'Zilean', 'Zoe', 'Zyra']
     let r=Math.floor(Math.random()*pool.length)
     return pool[r]
 }
@@ -396,6 +403,7 @@ function pickRandomMid(){
     let pool
     pool = ['Ahri',
             'Akali',
+            'Akshan',
             'Anivia',
             'Annie',
             'Aurelion Sol',
@@ -427,6 +435,7 @@ function pickRandomMid(){
             'Twisted Fate',
             'Veigar',
             'VelKoz',
+            'Vex',
             'Viego',
             'Viktor',
             'Vladimir',
@@ -434,6 +443,7 @@ function pickRandomMid(){
             'Yasuo',
             'Yone',
             'Zed',
+            'Zeri',
             'Ziggs',
             'Zoe']
     let r=Math.floor(Math.random()*pool.length)
@@ -462,7 +472,8 @@ function pickRandomBot(){
             'Varus',
             'Vayne',
             'Xayah',
-            'Yasuo']
+            'Yasuo',
+            'Zeri']
     let r=Math.floor(Math.random()*pool.length)
     return pool[r]
 }
@@ -498,6 +509,7 @@ function pickRandomSupport(){
             'Taric',
             'Thresh',
             'VelKoz',
+            'Vex',
             'Xerath',
             'Yuumi',
             'Zilean',
